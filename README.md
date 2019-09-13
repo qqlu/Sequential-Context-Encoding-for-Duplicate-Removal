@@ -1,5 +1,5 @@
 # [Sequential Context Coding for Duplicate Removal](https://arxiv.org/abs/1810.08770)
-by [Lu Qi](http://www.luqi.info), Li Jiang, [Shu Liu](http://www.shuliu.me), [Jianping Shi](http://shijianping.me/), [Jiaya Jia](http://www.cse.cuhk.edu.hk/leojia/).
+by [Lu Qi](http://www.luqi.info), [Shu Liu](http://www.shuliu.me), [Jianping Shi](http://shijianping.me/), [Jiaya Jia](http://www.cse.cuhk.edu.hk/leojia/).
 
 ## Introduction
 This repository has released the reference code about the paper. It is noted that reference code is the original code without any cleaning.

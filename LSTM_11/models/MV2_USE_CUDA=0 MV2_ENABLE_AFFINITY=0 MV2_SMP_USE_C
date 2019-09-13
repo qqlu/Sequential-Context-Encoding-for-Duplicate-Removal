@@ -1,0 +1,7 @@
+MV2_USE_CUDA=0 MV2_ENABLE_AFFINITY=0 MV2_SMP_USE_CMA=0 srun --partition=bj11part --mpi=pmi2 --gres=gpu:1 -n1 --ntasks-per-node=1 --job-name=ablation --kill-on-bad-exit=1 python train_model_after_from_before_baseline_noscore_msra_threshold_v2_no_appear.py --final_score_thresh=0.01 --base_path=/mnt/lustre/liushu1/qilu_ex/dataset/coco/fpn_bn_base/ --output_dir=/mnt/lustre/liushu1/qilu_ex/RNN_NMS/fpn_bn_base_after_from_before_mlp_source_weight2_001_v2_no_appear/
+
+MV2_USE_CUDA=0 MV2_ENABLE_AFFINITY=0 MV2_SMP_USE_CMA=0 srun --partition=bj11part --mpi=pmi2 --gres=gpu:1 -n1 --ntasks-per-node=1 --job-name=fpn_rnn --kill-on-bad-exit=1 python train_model_after_nms_global_attention_context_gate.py --base_path=/mnt/lustre/liushu1/qilu_ex/dataset/coco/pytorch_data/ --output_dir=/mnt/lustre/liushu1/qilu_ex/RNN_NMS/mask_rcnn_after_general_source_weight2/
+
+python train_model_joint_v3.py --output_dir=/mnt/lustre/liushu1/qilu_ex/RNN_NMS/mask_rcnn_joint_has_pretrain_v3_joint3_7_5/ --step=5 --num_epochs=7 --pre_post_weight=3
+
+MV2_USE_CUDA=0 MV2_ENABLE_AFFINITY=0 MV2_SMP_USE_CMA=0 srun --partition=bj11part --mpi=pmi2 --gres=gpu:1 -n1 --ntasks-per-node=1 --job-name=ablation --kill-on-bad-exit=1 python train_model_before_no_gt_nms_global_attention_context_gate_no_box.py --base_path=/mnt/lustre/liushu1/qilu_ex/dataset/coco/fpn_bn_base/ --output_dir=/mnt/lustre/liushu1/qilu_ex/RNN_NMS/fpn_bn_base_before_mlp_source_weight4_no_box/
